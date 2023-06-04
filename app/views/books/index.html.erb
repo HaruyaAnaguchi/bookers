@@ -2,18 +2,20 @@
 
 <h1>Books</h1>
 
-<% @books.each do |index| %>
+<table>
+  <% @books.each do |index| %>
 
-<h4>Title</h4>
-<%= index.title %>
+  <h4>Title</h4>
+  <%= index.title %>
 
-<h4>Body</h4>
-<%= index.body %>
+  <h4>Body</h4>
+  <%= index.body %>
 
-<%= link_to 'Show', book_path(index.id) %>
-<%= link_to 'edit', edit_book_path(index.id) %>
-<%= link_to 'destroy', book_path(index.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  <%= link_to 'Show', book_path(index.id) %>
+  <%= link_to 'edit', edit_book_path(index.id) %>
+  <%= link_to 'destroy', book_path(index.id), method: :delete, "data-confirm" => "Are you sure?" %>
 
-<% end %>
+  <% end %>
+</table>
 
 <%= render 'new' %>
