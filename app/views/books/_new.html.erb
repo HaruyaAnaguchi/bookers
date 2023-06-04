@@ -1,0 +1,22 @@
+<% if @book.errors.any? %>
+<%= @book.errors.count %>件のエラーが発生しました
+<ul>
+  <% @book.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<h1>New book</h1>
+
+<%= form_with model:@book do |book| %>
+
+<h4>Title</h4>
+<%= book.text_field :title %>
+
+<h4>Body</h4>
+<%= book.text_area :body %>
+
+<%= book.submit 'Create Book' %>
+
+<% end %>
