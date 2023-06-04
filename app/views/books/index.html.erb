@@ -14,9 +14,6 @@
 <%= link_to 'edit', edit_book_path(index.id) %>
 <%= link_to 'destroy', book_path(index.id), method: :delete, "data-confirm" => "Are you sure?" %>
 
-<%= render 'books/new' %>
-
-
-
 <% end %>
 
+<%= render 'new' %>
