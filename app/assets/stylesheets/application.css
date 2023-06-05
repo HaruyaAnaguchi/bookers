@@ -22,27 +22,87 @@
  }
 
 body {
-  margin: 33px;
-
+  margin: 3.5%;
+  width: 100%;
 }
 
 a {
-  color: #000;
+  color: black;
 }
 
 a:visited {
   color: grey;
 }
 
-.title {
-  font-weight: bold;
+h1, h2 {
+  margin: 2% 0 2% 1%;
 }
 
-.top-text {
-  line-height: 18px;
-  margin: 33px;
+p, li {
+  font-size: 0.7rem;
 }
+
+.top-text, .show-text {
+  margin: 5%;
+}
+
+
 
 .link-button {
-  margin:33px;
+  margin: 5%;
+}
+
+th, td {
+  padding: 0 1% 1.5%;
+  font-size: 0.7rem;
+}
+
+table {
+  margin: 3% 3% 4%;
+  width: 70%;
+}
+
+form {
+  margin-left: 0.5%
+}
+
+.input {
+  margin: 2% 0;
+}
+
+.flash-message {
+  color: green;
+}
+
+.error-box {
+  width: 50%;
+  border: solid 2px red;
+}
+
+.error-title {
+  height: 40px;
+  background-color: red;
+  text-align: center;
+  line-height: 40px;
+}
+
+.error-body {
+  height: 100px;
+  padding: 5% 14%;
+  background-color: #f0f0f0;
+}
+
+.error-title-message {
+ color: white;
+}
+
+.error-body-message {
+  position: absolute;
+  top: 45px;
+  left: 15%;
+}
+
+
+li {
+  margin: 0 auto;
 }

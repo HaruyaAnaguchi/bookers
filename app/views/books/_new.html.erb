@@ -1,22 +1,32 @@
+<h2>New book</h2>
+
 <% if @book.errors.any? %>
-<%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:
-<ul>
-  <% @book.errors.full_messages.each do |message| %>
-  <li><%= message %></li>
-  <% end %>
-</ul>
+<div class="error-box">
+  <div class="error-title">
+    <p class="error-title-message"><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</p>
+  </div>
+  <div class="error-body">
+   <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  </div>
+</div>
 <% end %>
 
-<h1>New book</h1>
-
 <%= form_with model:@book do |book| %>
+  <div class="new input">
+    <h4>Title</h4>
+    <%= book.text_field :title %>
+  </div>
 
-<h4>Title</h4>
-<%= book.text_field :title %>
-
+<div class="new input">
 <h4>Body</h4>
 <%= book.text_area :body %>
+</div>
 
-<%= book.submit 'Create Book' %>
-
+<div class="new input">
+<%= book.submit ' Create Book ' %>
+</div>
 <% end %>

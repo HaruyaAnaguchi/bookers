@@ -1,21 +1,29 @@
-<div><%= flash[:notice] %></div>
+<body>
+<div class="flash-message"><%= flash[:notice] %></div>
 
-<h1>Books</h1>
+<h2>Books</h2>
 
 <table>
-  <% @books.each do |index| %>
+<tr>
+  <th>Title</th>
+  <th>Body</th>
+  <th></th>
+</tr>
 
-  <h4>Title</h4>
-  <%= index.title %>
-
-  <h4>Body</h4>
-  <%= index.body %>
-
-  <%= link_to 'Show', book_path(index.id) %>
-  <%= link_to 'edit', edit_book_path(index.id) %>
-  <%= link_to 'destroy', book_path(index.id), method: :delete, "data-confirm" => "Are you sure?" %>
-
-  <% end %>
+<% @books.each do |index| %>
+  <tr>
+    <td><%= index.title %> </td>
+    <td> <%= index.body %> </td>
+    <td>
+        <%= link_to 'Show', book_path(index.id) %>
+        <%= link_to 'Edit', edit_book_path(index.id) %>
+        <%= link_to 'Destroy', book_path(index.id), method: :delete, "data-confirm" => "Are you sure?" %>
+    </td>
+  </tr>
+<% end %>
+</tr>
 </table>
 
 <%= render 'new' %>
+
+</body>
